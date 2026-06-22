@@ -1,0 +1,45 @@
+# =============================================================================
+# Hugging Face Spaces Requirements
+# CPU-only deployment — torch/torchvision installed separately via Dockerfile
+# from the CPU wheel index to avoid downloading 2GB+ CUDA binaries.
+# =============================================================================
+
+# ── NumPy — MUST be <2 because torch==2.1.0 was compiled against NumPy 1.x ──
+# NumPy 2.x breaks PyTorch's internal C extensions with binary ABI mismatch.
+numpy<2
+
+grad-cam
+
+# ── Network Science ─────────────────────────────────────────────────────────
+networkx
+python-louvain
+
+# ── Data & Preprocessing ────────────────────────────────────────────────────
+numpy
+pandas
+opencv-python-headless
+albumentations
+Pillow
+
+# ── Machine Learning & Evaluation ───────────────────────────────────────────
+scikit-learn
+
+# ── Visualization ───────────────────────────────────────────────────────────
+matplotlib
+seaborn
+
+# ── Experiment Configuration ────────────────────────────────────────────────
+pyyaml
+
+# ── Streamlit Dashboard ──────────────────────────────────────────────────────
+streamlit
+plotly
+
+# ── Interactive Network Visualization ───────────────────────────────────────
+pyvis
+
+# ── Alternative Model Zoo ────────────────────────────────────────────────────
+timm
+
+# ── Statistical Functions ────────────────────────────────────────────────────
+scipy
